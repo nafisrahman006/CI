@@ -1,8 +1,6 @@
 FROM python:alpine
 
-RUN apt-get update \
-    && apt-get upgrade -y \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache gcc musl-dev libffi-dev
 
 RUN pip install --no-cache-dir --upgrade setuptools==75.8.0
 
