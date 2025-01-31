@@ -4,7 +4,7 @@ RUN apt-get update \
     && apt-get upgrade -y \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --no-cache-dir --upgrade setuptools
+RUN pip install --no-cache-dir --upgrade setuptools==75.8.0
 
 WORKDIR /app
 
