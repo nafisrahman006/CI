@@ -1,8 +1,10 @@
 FROM python:3.10-slim
 
-RUN apt-get update && apt-get upgrade -y
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade setuptools
+RUN pip install --no-cache-dir --upgrade setuptools
 
 WORKDIR /app
 
