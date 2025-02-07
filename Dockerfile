@@ -1,4 +1,8 @@
-FROM python:3.10-slim
+FROM python:alpine
+
+RUN apk add --no-cache gcc musl-dev libffi-dev
+
+RUN pip install --no-cache-dir --upgrade setuptools==75.8.0
 
 WORKDIR /app
 
