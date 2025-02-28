@@ -27,7 +27,7 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install --no-cache-dir -r app/requirements.txt
-          pip install pytest
+  
           pip install flake8
       - name: Run Flake8 Linter
         run: |
@@ -43,4 +43,5 @@ jobs:
     
       - name: Unit Test
         run: |
+          pip install pytest
           pytest app/tests/ 
