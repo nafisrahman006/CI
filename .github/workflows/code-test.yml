@@ -48,7 +48,6 @@
 #           pytest app/tests/ 
 
 
-
 name: Python Code Tests
 
 on:
@@ -77,6 +76,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          pip install --upgrade pip
           pip install flake8
           pip install pytest
 
@@ -91,4 +91,5 @@ jobs:
     steps:
       - name: Unit Test
         run: |
-          pytest app/tests/
+          python -m pytest app/tests/
+
