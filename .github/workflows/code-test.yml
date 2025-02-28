@@ -48,3 +48,5 @@ jobs:
           pip install --no-cache-dir -r app/requirements.txt
           pip install pytest
           pytest app/tests/ 
+
+          
