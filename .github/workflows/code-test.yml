@@ -8,8 +8,8 @@ on:
   #   branches:
   #     - feature/test
 
-permissions:
-  contents: read
+# permissions:
+#   contents: write
 
 jobs:
   test-python:
