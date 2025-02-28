@@ -76,9 +76,13 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install flake8
           pip install pytest
+
+      - name: Check pytest installation
+        run: |
+          python -m pytest --version  # Check pytest version to ensure it's installed correctly
 
       - name: Run Flake8 Linter
         run: |
@@ -91,5 +95,5 @@ jobs:
     steps:
       - name: Unit Test
         run: |
-          python -m pytest app/tests/
+          python -m pytest app/tests/  # Run the tests using pytest
 
