@@ -30,7 +30,11 @@ jobs:
           pip install pytest
           pip install flake8
       - name: Run Flake8 Linter
-        run: flake8 .
+        run: |
+          flake8 --config=.flake8
+          flake8 .
+
+
 
       - name: Unit Test
         run: |

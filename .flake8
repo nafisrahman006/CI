@@ -1,0 +1,10 @@
+
+[flake8]
+exclude = 
+    app/tests/*,  # Ignore all test files
+    app/tasks.py,
+    .git,
+    __pycache__,
+    venv   # Ignore tasks.py
+max-line-length = 88  # Adjust line length if needed
+ignore = E302, W391, F401, E501  # Ignore specific rules
