@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - "feature/*"
-  # pull_request:
-  #   branches:
-  #     - feature/test
+  pull_request:
+    branches:
+      - dev
 
 permissions:
   contents: read
@@ -49,4 +49,4 @@ jobs:
           pip install pytest
           pytest app/tests/ 
 
-          
+
