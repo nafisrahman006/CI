@@ -43,5 +43,6 @@ jobs:
     
       - name: Unit Test
         run: |
+          pip install --no-cache-dir -r app/requirements.txt
           pip install pytest
           pytest app/tests/ 
