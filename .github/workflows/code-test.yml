@@ -3,10 +3,10 @@ name: Python Code Tests
 on:
   push:
     branches:
-      - feature/python-code
+      - feature/tests
   pull_request:
     branches:
-      - feature/python-code
+      - feature/tests
 
 permissions:
   contents: read

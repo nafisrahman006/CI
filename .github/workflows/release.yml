@@ -2,8 +2,8 @@ name: Build and Push Docker Image
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - v1.1.1
 
 jobs:
   docker-build-and-push:
@@ -19,10 +19,8 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build Docker Image
+      - name: Build Docker Image and Push
         run: |
-          docker build -t nfsr/api-project:base-image .
-
-      - name: Push Docker Image to Docker Hub
-        run: |
-          docker push nfsr/api-project:base-image
+          IMAGE_TAG=${GITHUB_REF#refs/tags/}
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/api-project:$IMAGE_TAG .
+          docker push ${{ secrets.DOCKER_USERNAME }}/api-project:$IMAGE_TAG
