@@ -3,9 +3,7 @@ on:
   push:
     branches:
       - main
-env:
-  DOCKERHUB_USERNAME: ${{ vars.DOCKERHUB_USERNAME }}
-  DOCKERHUB_REPOSITORY_NAME: fast-api-project
+
   # DEPLOYMENT_SERVER_IP: ${{ secrets.INSTANCE_IP }}
 
 
